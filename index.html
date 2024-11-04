@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON and jQuery Lab</title>
+  
+</head>
+<body>
+  <script>
+    const bookData = {
+                        "Books":
+                        [
+                        {
+                            "title": "The Great Gatsby",
+                            "author": "F. Scott Fitzgerald",
+                            "publicationYear": 1925,
+                            "genres": ["Fiction", "Classics"]
+                        },
+                        {
+                            "title": "To Kill a Mockingbird",
+                            "author": "Harper Lee",
+                            "publicationYear": 1960,
+                            "genres": ["Fiction", "Coming-of-Age"]
+                        }
+                        ]
+                    };
+
+    console.log(bookData.Books[0].title);
+    console.log(bookData.Books[1].author);
+    const allGenres = [];
+    bookData.Books.forEach(book => {
+      allGenres.push(...book.genres); // Spread genres of each book into the allGenres array
+    });
+
+    console.log(allGenres);
+
+    // Loop through the books and display the books
+    bookData.Books.forEach(book => {
+            console.log(book.subjects);
+        });
+
+  </script>
+</body>
+</html>
